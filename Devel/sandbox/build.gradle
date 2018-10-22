@@ -3,9 +3,10 @@ apply plugin: 'application'
 mainClassName = "MyFirstProgram"
 
 repositories {
-    mavenCentral()
+    jcenter()
 }
 
 dependencies {
-    compile 'org.testng:testng:7.0.0-beta1'
+    testCompile 'org.testng:testng:6.10'
 }
+
