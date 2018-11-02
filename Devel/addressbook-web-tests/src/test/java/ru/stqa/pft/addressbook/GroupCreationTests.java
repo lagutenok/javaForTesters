@@ -3,6 +3,7 @@ package ru.stqa.pft.addressbook;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -16,10 +17,7 @@ public class GroupCreationTests {
    public void setUp() throws Exception {
 
       System.setProperty("webdriver.gecko.driver", "C:\\SeleniumGecko/geckodriver.exe");
-
-//Now you can Initialize marionette driver to launch firefox
-      DesiredCapabilities capabilities = DesiredCapabilities.firefox();
-      capabilities.setCapability("marionette", true);
+      FirefoxOptions options = new FirefoxOptions();
 
       wd = new FirefoxDriver();
       wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
